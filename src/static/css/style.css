@@ -1,0 +1,196 @@
+/* Загальні стилі для всієї сторінки */
+body {
+    font-family: 'Arial', sans-serif;  /* Шрифт сторінки */
+    margin: 0;  /* Прибираємо відступи */
+    padding: 0;  /* Прибираємо внутрішні відступи */
+    background-color: #f7f9fb;  /* Колір фону */
+    color: #333;  /* Колір тексту */
+}
+
+/* Обгортка для всього контенту */
+.wrapp {
+    display: flex;  /* Використовуємо flexbox для верстки */
+    flex-direction: column;  /* Вертикальна орієнтація елементів */
+    height: 100vh;  /* Висота екрану */
+    overflow: hidden;  /* Вимикаємо прокрутку */
+}
+
+/* Верхня частина сторінки */
+.top {
+    display: flex;  /* Flexbox для горизонтального розміщення */
+    padding: 20px;  /* Внутрішні відступи */
+    background-color: #2c3e50;  /* Темно-синій фон */
+    color: white;  /* Білий текст */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Легка тінь */
+}
+
+/* Обробка екрану */
+.top__screen {
+    border-radius: 10px;  /* Закруглення кутів */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Тінь */
+    transition: transform 0.3s ease-in-out;  /* Плавний ефект масштабування */
+}
+
+/* Результат розпізнавання */
+.top__result {
+    flex-grow: 1;  /* Розтягуємо на залишковий простір */
+    display: flex;  /* Flexbox для вертикального розміщення */
+    align-items: center;  /* Центруємо по вертикалі */
+    flex-direction: column;  /* Вертикальна орієнтація */
+    padding: 20px;  /* Внутрішні відступи */
+    background-color: #ecf0f1;  /* Світлий фон */
+    border-radius: 10px;  /* Закруглені кути */
+    margin-left: 20px;  /* Відступ зліва */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Тінь */
+    color: #2c3e50;  /* Темний текст */
+}
+
+/* Заголовок результату */
+.top__result-title {
+    font-size: 28px;  /* Розмір шрифту */
+    text-transform: capitalize;  /* Заголовні літери */
+    text-align: center;  /* Центруємо текст */
+    margin-bottom: 20px;  /* Відступ знизу */
+    font-weight: 600;  /* Напівжирне начертання */
+}
+
+/* Блок тексту результату */
+.top__result-text {
+    width: 100%;  /* Ширина 100% */
+    height: 150px;  /* Фіксована висота */
+    display: flex;  /* Flexbox для центрування */
+    align-items: center;  /* Центруємо по вертикалі */
+    justify-content: center;  /* Центруємо по горизонталі */
+    border: 2px solid #34495e;  /* Темна межа */
+    border-radius: 10px;  /* Закруглені кути */
+    background: linear-gradient(145deg, #ffffff, #dfe6e9);  /* Градієнт фону */
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.1), inset -4px -4px 6px rgba(255, 255, 255, 0.1);  /* Вставна тінь */
+    padding: 20px;  /* Внутрішні відступи */
+}
+
+/* Текст в блоці результату */
+.top__result-text span {
+    font-size: 80px;  /* Великий розмір шрифту */
+    font-weight: bold;  /* Напівжирне начертання */
+    color: #2c3e50;  /* Колір тексту */
+}
+
+/* Нижня частина сторінки */
+.bottom {
+    flex-grow: 1;  /* Розтягуємо на залишковий простір */
+    padding: 20px;  /* Внутрішні відступи */
+    background-color: #ffffff;  /* Білий фон */
+    display: flex;  /* Flexbox для верстки */
+    flex-direction: column;  /* Вертикальна орієнтація */
+}
+
+/* Контейнер для контенту знизу */
+.bottom__content {
+    display: flex;  /* Flexbox для горизонтальної верстки */
+    height: 100%;  /* Висота 100% */
+    border-radius: 10px;  /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Тінь */
+    flex-grow: 1;  /* Розтягуємо */
+}
+
+/* Текстовий блок */
+.bottom__content-text {
+    background-color: #f1f2f6;  /* Світлий фон */
+    border-radius: 10px;  /* Закруглені кути */
+    margin: 10px;  /* Відступи */
+    padding: 15px;  /* Внутрішні відступи */
+    flex: 0 0 40%;  /* Фіксована ширина */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Тінь */
+    color: #333;  /* Колір тексту */
+    overflow-y: auto;  /* Прокрутка тексту */
+}
+
+/* Контейнер інтерфейсу з кнопками */
+.bottom__content-interface {
+    flex-grow: 1;  /* Розтягуємо */
+    padding: 20px;  /* Внутрішні відступи */
+    display: flex;  /* Flexbox для верстки */
+    flex-direction: column;  /* Вертикальна орієнтація */
+    justify-content: space-between;  /* Розподіл елементів по вертикалі */
+    align-items: flex-start;  /* Вирівнювання по лівому краю */
+}
+
+/* Розділення кнопок на 3 блоки */
+.buttons {
+    display: flex;  /* Flexbox для верстки */
+    flex-direction: column;  /* Вертикальна орієнтація */
+    gap: 20px;  /* Відстань між кнопками */
+    width: 100%;  /* Ширина 100% */
+    flex-grow: 1;  /* Розтягуємо */
+    justify-content: space-between;  /* Розподіл по вертикалі */
+}
+
+/* Група кнопок */
+.button-group {
+    display: flex;  /* Flexbox для горизонтальної орієнтації */
+    justify-content: center;  /* Центруємо */
+    gap: 10px;  /* Відстань між кнопками */
+    width: 100%;  /* Ширина 100% */
+}
+
+/* Загальні стилі для кнопок */
+button {
+    background-color: #3498db;  /* Колір фону */
+    color: white;  /* Колір тексту */
+    border: none;  /* Без рамки */
+    padding: 15px;  /* Внутрішні відступи */
+    font-size: 16px;  /* Розмір шрифту */
+    border-radius: 8px;  /* Закруглені кути */
+    cursor: pointer;  /* Вказівник курсора */
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;  /* Плавні переходи */
+    text-align: center;  /* Центрування тексту */
+    width: 100%;  /* Кнопки розтягуються на всю ширину */
+    height: 50px;  /* Фіксована висота кнопок */
+    max-width: 180px;  /* Максимальна ширина */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  /* Тінь */
+    text-transform: capitalize;  /* Перетворення тексту в заглавні літери */
+}
+
+/* Контейнер для груп кнопок */
+.button-group {
+    display: flex;  /* Flexbox для горизонтальної орієнтації */
+    justify-content: center;  /* Центруємо */
+    gap: 15px;  /* Відстань між кнопками */
+    width: 100%;  /* Ширина 100% */
+}
+
+/* Ефект наведення і кліка */
+button:hover {
+    background-color: #2980b9;  /* Колір фону при наведенні */
+    transform: scale(1.05);  /* Ефект збільшення */
+}
+
+button:active {
+    background-color: #1c5985;  /* Колір фону при кліку */
+}
+
+/* Різні кольори кнопок */
+button#save-letter, button#remove-letter {
+    background-color: #9b59b6;  /* Фіолетовий колір */
+}
+
+button#space, button#clear-screen {
+    background-color: #2ecc71;  /* Зелений колір */
+}
+
+button#start-drawing, button#stop-drawing {
+    background-color: #f39c12;  /* Помаранчевий колір */
+}
+
+/* Ефект наведення */
+button#save-letter:hover, button#remove-letter:hover {
+    background-color: #8e44ad;  /* Темно-фіолетовий при наведенні */
+}
+
+button#space:hover, button#clear-screen:hover {
+    background-color: #27ae60;  /* Темно-зелений при наведенні */
+}
+
+button#start-drawing:hover, button#stop-drawing:hover {
+    background-color: #e67e22;  /* Темно-помаранчевий при наведенні */
+}
